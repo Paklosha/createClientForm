@@ -1,5 +1,11 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import Vuelidate from 'vuelidate'
 
-createApp(App).use(router).mount('#app')
+Vue.use(Vuelidate)
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')
